@@ -18,11 +18,6 @@ run chmod +x /launch.sh
 ## clean sources
 run apt-get clean
 
-## turn on indexing: http://chrislarson.me/blog/install-neo4j-graph-database-ubuntu
-## enable neo4j indexing, and set indexable keys to name,age
-run sed -i "s|#node_auto_indexing|node_auto_indexing|g" /var/lib/neo4j/conf/neo4j.properties
-run sed -i "s|#node_keys_indexable|node_keys_indexable|g" /var/lib/neo4j/conf/neo4j.properties
-
 # enable shell server on all network interfaces
 run echo "remote_shell_host=0.0.0.0" >> /var/lib/neo4j/conf/neo4j.properties
 
